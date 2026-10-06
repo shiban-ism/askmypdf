@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv311/
+venv/
+
+# Environment variables
+config/.env
+
+# Flask / SQLite
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# local data folders
+uploads/
+chroma_store/
