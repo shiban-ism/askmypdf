@@ -275,7 +275,7 @@ You are free to use, modify, and distribute it.
 
 ## 👤 Author
 
-**Khaled Elsayed**
+**Shiban Etoum**
 
 - 📧 Email: shiban.etoum.2003@gmail.com
 - 🧠 Built for learning, research, and real-world RAG systems
