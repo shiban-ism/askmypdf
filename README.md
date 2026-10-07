@@ -190,6 +190,64 @@ http://127.0.0.1:5000
 - UI resets instantly (no reload)
 
 ---
+## 📸 Screenshots & Demo Walkthrough
+This section demonstrates the full workflow of AskMyPDF, from uploading a document to asking questions, validating answers, handling unsupported queries, and resetting the session.
+
+1. Initial Home Screen (No PDF Uploaded)
+When the application starts, no document is loaded. The user is prompted to upload a PDF before asking any questions.
+
+<img width="1277" height="616" alt="01-home-empty" src="https://github.com/user-attachments/assets/4d411d7a-0257-43a6-96bb-c744b7e70e2d" />
+
+
+2. Uploading a PDF
+The user uploads a PDF file, which is:
+
+Saved locally
+Indexed into a vector database (ChromaDB)
+Prepared for semantic search
+
+<img width="1276" height="618" alt="02-upload-pdf" src="https://github.com/user-attachments/assets/07ebdaaa-bf66-42ae-be42-d350fae3eb18" />
+
+
+3. Asking a Question
+Once a PDF is uploaded, the user can ask questions using a chat-style interface. User messages appear on the right, similar to modern messaging apps.
+
+<img width="1276" height="616" alt="03-chat-question" src="https://github.com/user-attachments/assets/7566ef74-f727-4a2b-9412-494f92da31a9" />
+
+
+4. Answer Generated from PDF
+The assistant retrieves relevant content from the PDF and generates an answer. Each answer includes the exact source page number(s) + it might give also the source page for the second highest retrieved vector.
+
+<img width="1276" height="616" alt="04-chat-answer" src="https://github.com/user-attachments/assets/b19c0b41-b77a-446b-b97c-4d06b7f1d27c" />
+
+
+5. Multiple Questions in a Single Session
+Users can ask multiple questions without reloading the page. The full conversation history is preserved until reset.
+
+<img width="1276" height="617" alt="05-multiple-qa-demo" src="https://github.com/user-attachments/assets/9066904c-b597-47ac-8759-8d124bbb0541" />
+
+
+6. Hallucination Prevention (Unsupported Questions)
+If a question is not answered explicitly in the PDF, the system responds with:
+
+"Answer is not in this PDF."
+
+This ensures the assistant never fabricates information.
+
+<img width="1280" height="617" alt="07-negative-queries-not-in-pdf" src="https://github.com/user-attachments/assets/0bb0a363-1fea-4333-bb7f-0e5686ad7d75" />
+
+
+7. Resetting the Session
+The reset button:
+
+Clears the uploaded PDF
+Deletes the vector index
+Clears chat history
+Returns the app to its initial state
+
+<img width="1277" height="617" alt="08-reset-state" src="https://github.com/user-attachments/assets/8c0600e3-eb7d-411c-89b8-5476adbc4ac9" />
+
+---
 
 ## 🧾 Limitations
 
@@ -219,7 +277,7 @@ You are free to use, modify, and distribute it.
 
 **Khaled Elsayed**
 
-- 📧 Email: khaled.elsayed2206@gmail.com
+- 📧 Email: shiban.etoum.2003@gmail.com
 - 🧠 Built for learning, research, and real-world RAG systems
 
 ---
